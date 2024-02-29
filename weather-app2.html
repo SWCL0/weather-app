@@ -6,10 +6,7 @@
     <title>Document</title>
     <style>
         .table {
-            color: crimson;
-
-            td {
-            border: 1px crimson solid;}
+            
         }
     </style>
     <script>
@@ -20,11 +17,21 @@
             console.log(weather);
 
             document.getElementById('table').innerHTML = 
-            "<table class='table'><tr>" + 
-                "<td>" + weather.latitude + "</td>" +
-                "<td>" + weather.longitude + "</td>"
-                + "</tr></table>";
-                }
+            "<table class='table'>" + 
+                "<tr>" + 
+                    "<th>Datum</th>" + 
+                    "<th>Tijd</th>" + 
+                    "<th>Temperatuur</th>" + 
+                    "<th>Druk</th>" + 
+                    "<th>Bewolking</th>" + 
+                    "<th>Wind</th>" + 
+                "</tr>" + 
+                "<tr>" + 
+                    "<td>" + weather.current.time + "</td>" +
+                    "<td>" + weather.longitude + "</td>" + 
+                "</tr>" + 
+            "</table>";
+        }
 
         log();
     </script>
